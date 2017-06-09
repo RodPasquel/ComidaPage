@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Comida Gaby y Rod</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<style>
+			#myDIV {
+				width: 100%;
+				padding: 50px 0;
+				text-align: center;
+				background-color: lightblue;
+				margin-top:20px;
+				}
+		</style>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<p style="font-size:68px;color: #1cb495;" >COMIDA GABY Y ROD</p>
+			</header>
+			   <h2>
+			        <p><i class="fa fa-calendar" style="color:#dddddd;"></i>&nbsp Domingo 9 de Julio de 2017.</p>
+					<p><i class="fa fa-clock-o" style="color:#dddddd;"></i>&nbsp 3:00 pm. &nbspFaltan solo:
+					<p id="demo" style="font-size:68px;color: #1cb495;">
+					</p> <!--Aquí se llama al Script "demo"-->
+					
+				</h2>
+			<script>
+			// Set the date we're counting down to
+			var countDownDate = new Date("Jul 9, 2017 15:00:00").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+				// Get todays date and time
+				var now = new Date().getTime();
+				
+				// Find the distance between now an the count down date
+				var distance = countDownDate - now;
+				
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+				
+				// Output the result in an element with id="demo"
+				document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+				+ minutes + "m " + seconds + "s ";
+				
+				// If the count down is over, write some text 
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("demo").innerHTML = "LA COMIDA HA COMENZADO";
+				}
+			}, 1000);
+			</script>
+				
+
+		<!-- Footer -->
+			<footer id="footer">
+			<p>				
+				<a href=".\Assets\Comida.ics"><button style="font-size:14px">&nbsp &nbsp Agregar a mi calendario &nbsp &nbsp <i class="fa fa-download"></i>
+					</button></a>
+				<a href=".\llegar.html"><button style="font-size:14px">&nbsp &nbsp ¿Cómo llegar? &nbsp &nbsp <i class="fa fa-map"></i>
+					</button></a>
+			</p>
+				<ul class="icons">
+					<li><a href="https://twitter.com/bluetterrfly" class="icon fa-twitter" target="_blank" style="color: #ffcccc;"><span class="label">Twitter</span></a></li>
+					<li><a href="http://twitter.com/rodpasquel" class="icon fa-twitter" target="_blank" style="color: #9999ff;"><span class="label">Twitter</span></a></li>
+					
+				</ul>
+				<ul class="copyright">
+					<li>&copy;2017 Rod & Gaby.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
